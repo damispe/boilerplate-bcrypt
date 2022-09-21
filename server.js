@@ -8,6 +8,8 @@ fccTesting(app);
 const saltRounds = 12;
 const myPlaintextPassword = 'sUperpassw0rd!';
 const someOtherPlaintextPassword = 'pass123';
+var hash = bcrypt.hashSync(myPlaintextPassword, saltRounds);
+var result = bcrypt.compareSync(myPlaintextPassword, hash);
 
 
 //START_ASYNC -do not remove notes, place code between correct pair of notes.
